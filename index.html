@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Skyline Alfonso</title>
+  <link rel="stylesheet" type="text/css" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel">
+				<div class="panel-heading">
+					User Sign-In
+					 <div>
+					 	<br><button id="newBuilding" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add User</button>
+					 </div>
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Time</th>
+								<th>Sign-Out</th>
+							</tr>			
+						</thead>
+						<tbody id="input" ></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel">
+				<div class="panel-heading">Session Values (Informative Only)</div>
+				<div class="panel-body">
+					<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Session Time</th>
+								</tr>			
+							</thead>
+							<tbody id="logoutValues"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="panel">
+				<div class="panel-heading">
+					Data
+					<div>
+						<button id="run" class="btn btn-success" onclick="solution()">Run Solution</button><br>
+						<p>Filter Time:</p>
+						<input type="number" class="form-control"min="0" value=0 id="filter" required><br>
+					 	
+					 	
+					 </div>
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Data-Entry (ID-Time-Activity)</th>
+							</tr>			
+						</thead>
+						<tbody id="dataEntry"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="panel">
+				<div class="panel-heading">Selected <span id="indicative"></span></div>
+				<div class="panel-body">
+					<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Id</th>
+								</tr>			
+							</thead>
+							<tbody id="solutionValues"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
+		
+
+
+	
+   
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Sign-in User</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+        	<div class="col-md-12">
+				<div class="form-group">
+					<label for="Li">Id:</label>
+					<input type="number" class="form-control"min="0"  id="user_id" value="0" required>
+				</div>
+        	</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="addNew()">Log-in user</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+<script src="assets/jquery/jquery-3.4.1.min.js"></script>
+<script src="assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script  src="js/index.js"></script>
+</html>
